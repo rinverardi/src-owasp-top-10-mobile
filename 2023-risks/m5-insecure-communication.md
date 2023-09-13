@@ -1,9 +1,6 @@
----
-layout: col-sidebar
-title: "M5: Insecure Communication"
----
+# M5: Insecure Communication
 
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -13,7 +10,7 @@ Most modern mobile applications exchange data with one or more remote servers. W
 - Rogue carrier or network devices (routers, cell towers, proxy's, etc); or
 - Malware on your mobile device.
 
-# Attack Vectors	
+## Attack Vectors
 
 **Exploitability EASY**
 
@@ -23,8 +20,7 @@ While modern applications do reply on cryptographic protocols such as SSL/TLS, t
 * Accepting bad ssl certificates (self-signed, revoked, expired, wrong host...); or
 * Inconsistency (having SSL/TLS only on select workflows such as authentication).
 
-
-# Security Weakness	
+## Security Weakness
 
 **Prevalence COMMON** 
 
@@ -32,14 +28,14 @@ While modern applications do reply on cryptographic protocols such as SSL/TLS, t
 
 While modern mobile applications aim to protect network traffic, they often have inconsistencies in their implementation. These inconsistencies can lead to vulnerabilities that expose data and session IDs to interception. Just because an app uses transport security protocols doesn't mean it's implemented correctly. To identify basic flaws, you can observe the network traffic on the phone. However, detecting more subtle flaws requires a closer look at the application's design and configuration.
 
-# Technical Impacts	
+## Technical Impacts
 
 **Impact SEVERE**
 
 This flaw can expose user data which might lead to account takeover, user impersonation, PII data leaks and more, for instance an attacker might intercept user credentials, session, 2FA tokens which can open the door for more elaborate attacks.   
 
-# Business Impacts
-	
+## Business Impacts
+
 **Impact MODERATE** 
 
 At a minimum, interception of sensitive data through a communication channel will result in a privacy violation.
@@ -50,7 +46,7 @@ The violation of a user's confidentiality may result in:
 * Fraud, or
 * Reputational Damage.
 
-# Am I Vulnerable To 'Insecure Communication'?
+## Am I Vulnerable To 'Insecure Communication'?
 
 This risk covers all aspects of getting data from point A to point B, but doing it insecurely. It encompasses mobile-to-mobile communications, app-to-server communications, or mobile-to-something-else communications. This risk includes all communications technologies that a mobile device might use: TCP/IP, WiFi, Bluetooth/Bluetooth-LE, NFC, audio, infrared, GSM, 3G, SMS, etc.
 
@@ -62,7 +58,7 @@ If the data is being stored locally in the device itself, that's #Insecure Data.
 
 The usual risks of insecure communication are around data integrity, data confidentiality, and origin integrity. If the data can be changed while in transit, without the change being detectable (e.g., via a man-in-the-middle attack) then that is a good example of this risk. If confidential data can be exposed, learned, or derived by observing the communications as it happens (i.e., eavesdropping) or by recording the conversation as it happens and attacking it later (offline attack), that's also an insecure communication problem. Failing to properly setup and validate a TLS connection (e.g., certificate checking, weak ciphers, other TLS configuration problems) are all here in insecure communication.
 
-# How Do I Prevent 'Insecure Communication'?
+## How Do I Prevent 'Insecure Communication'?
 
 **General Best Practices**
 
@@ -96,7 +92,7 @@ Default classes in the latest version of iOS handle SSL cipher strength negotiat
 * If using a class which extends SSLSocketFactory, make sure checkServerTrusted method is properly implemented so that server certificate is correctly checked.
 * Avoid overriding `onReceivedSslError` to allow invalid SSL certificates
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 There are a few common scenarios that penetration testers frequently discover when inspecting a mobile app's communication security:
 
@@ -120,10 +116,11 @@ There are a few common scenarios that penetration testers frequently discover wh
 
  The mobile app receives a session identifier from an endpoint via non-secure channels instead of over SSL/TLS. This allows an adversary to bypass two-factor authentication by using the intercepted session identifier.
 
-
-# References
+<!--
+## References
 
 - OWASP
   - [OWASP](https://www.owasp.org/)
 - External
   - [External References](http://cwe.mitre.org/)
+-->

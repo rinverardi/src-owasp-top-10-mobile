@@ -1,15 +1,12 @@
----
-layout: col-sidebar
-title: "M8: Security Misconfiguration"
----
+# M8: Security Misconfiguration
 
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
 Security misconfiguration in mobile apps refers to the improper configuration of security settings, permissions, and controls that can lead to vulnerabilities and unauthorized access. Threat agents who can exploit security misconfigurations are attackers aiming to gain unauthorized access to sensitive data or perform malicious actions. Threat agents can be an attacker with physical access to the device, a malicious app on the device that exploits security misconfiguration to execute unauthorized actions on the target vulnerable application context.
 
-# Attack Vectors
+## Attack Vectors
 
 **Exploitability DIFFICULT**
 
@@ -23,7 +20,7 @@ Security misconfigurations in mobile apps can be exploited through various attac
 - Insecure file permissions: Storing application files with world-readable and/or world-writable permissions.
 - Misconfigured session management: Improper session management can result in session hijacking, allowing attackers to impersonate legitimate users.
 
-# Security Weakness
+## Security Weakness
 
 **Prevalence COMMON**  
 
@@ -38,7 +35,7 @@ Examples of security misconfigurations include:
 - Leaving default usernames and passwords unchanged, providing easy access to attackers.
 - Inadequate access controls that allow unauthorized users to perform privileged actions.
 
-# Technical Impacts
+## Technical Impacts
 
 **Impact SEVERE**
 
@@ -49,7 +46,7 @@ Security misconfigurations can have significant technical impacts on mobile apps
 - Data breaches: Inadequate security configurations may result in data breaches, exposing sensitive data to unauthorized individuals.
 - Compromise of backend systems: Misconfigurations in the mobile app can provide attackers with a foothold to compromise the backend systems or infrastructure.
 
-# Business Impacts
+## Business Impacts
 
 **Impact SEVERE**
 
@@ -60,7 +57,7 @@ Security misconfigurations can have severe business impacts, including:
 - Downtime and disruption: Exploitation of security misconfigurations can lead to app downtime, service disruption, or compromised functionality, affecting user experience and business operations.
 - Damage to brand reputation: Publicly disclosed security incidents can damage the organization's reputation, leading to loss of customer trust and potential loss of business.
 
-# Am I Vulnerable to Security Misconfigurations?
+## Am I Vulnerable to Security Misconfigurations?
 
 Mobile apps are vulnerable to security misconfigurations if they have not been properly configured to follow security best practices. Common indicators of vulnerability to security misconfigurations include:
 
@@ -74,7 +71,7 @@ Mobile apps are vulnerable to security misconfigurations if they have not been p
 
 To determine if your app is vulnerable to security misconfigurations, you should conduct a thorough security assessment, including code review, security testing, and configuration analysis.
 
-# How Do I Prevent Security Misconfigurations?
+## How Do I Prevent Security Misconfigurations?
 
 Preventing security misconfigurations in mobile apps requires following secure coding and configuration practices. Here are some key prevention measures:
 
@@ -87,7 +84,7 @@ Preventing security misconfigurations in mobile apps requires following secure c
 - Disable backup mode (Android): By disabling backup mode on Android devices, you prevent the inclusion of app data in the device's backup, ensuring that sensitive data from the app is not stored in the device backup.
 - Limit application attack surface by only exporting activities, content providers and services that are necessary to be exported
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 The following scenarios showcase security misconfigurations in mobile apps:
 
@@ -111,10 +108,12 @@ A mobile app exports some activity that is meant for internal use, giving attack
 
 A mobile app requests excessive permissions that are not essential for its core functionality. For instance, a simple flashlight app requesting access to the user's contacts, location, and camera. This exposes user data to unnecessary risks, as the app could potentially misuse the granted permissions or unintentionally leak sensitive information.
 
-# References
+<!--
+## References
 
 - OWASP
   - [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0xa8-security-misconfiguration/)
   - [OWASP Top 10](https://owasp.org/Top10/A05_2021-Security_Misconfiguration/)
 - External
   - [External References](http://cwe.mitre.org/)
+-->

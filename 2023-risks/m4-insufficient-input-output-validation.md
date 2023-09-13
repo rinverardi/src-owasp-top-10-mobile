@@ -1,10 +1,6 @@
----
+# M4: Insufficient Input/Output Validation
 
-layout: col-sidebar
-title: "M4: Insufficient Input/Output Validation"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -14,13 +10,13 @@ These vulnerabilities can have detrimental consequences, including unauthorized 
 
 Inadequate output validation can result in data corruption or presentation vulnerabilities, allowing malicious actors to inject malicious code or manipulate sensitive information displayed to users.
 
-# Attack Vectors	
+## Attack Vectors
 
 **Exploitability DIFFICULT**
 
 Insufficient input/output validation exposes our application to critical attack vectors, including SQL injection, XSS, command injection and path traversal. These vulnerabilities can lead to unauthorized access, data manipulation, code execution, and compromise of the entire backend system. 
 
-# Security Weakness	
+## Security Weakness
 
 **Prevalence COMMON**
 
@@ -38,7 +34,7 @@ Insufficient input/output validation vulnerability occurs when an application fa
 
 These vulnerabilities often arise from errors in application logic, incomplete implementation of validation checks, lack of security awareness, or insufficient testing and code review practices. 
 
-# Technical Impacts
+## Technical Impacts
 
 **Impact SEVERE**
 
@@ -57,9 +53,8 @@ Insufficient input/output validation vulnerability can have several technical im
 
 **Legal and Compliance Issues:** Inadequate validation may lead to legal liabilities, regulatory penalties and non compliance with data protection regulations.
 
+## Business Impacts
 
-# Business Impacts
-	
 **Impact SEVERE**
 
 Insufficient input/output validation vulnerability has significant technical and business implications. From an application standpoint, the impacts include:
@@ -74,7 +69,7 @@ On the business side, the impacts include:
 - Legal and Compliance Consequences: Non-compliance with data protection regulations due to insufficient validation can lead to legal liabilities, regulatory penalties, and potential financial losses.
 - Financial Impact: Data breaches or system disruptions caused by the vulnerability can result in financial losses due to incident response, remediation costs, legal fees, and potential loss of revenue.
 
-# Am I Vulnerable To 'Insufficient Input/Output Validation'?
+## Am I Vulnerable To 'Insufficient Input/Output Validation'?
 
 An application can be vulnerable to insufficient input/output validation due to:
 
@@ -84,7 +79,7 @@ An application can be vulnerable to insufficient input/output validation due to:
 - Insufficient Data Integrity Checks: Not performing proper data integrity checks can lead to data corruption or unauthorized modification, compromising reliability and security.
 - Poor Secure Coding Practices: Neglecting secure coding practices, such as using parameterized queries or escaping/encoding data, contributes to input/output validation vulnerabilities.
 
-# How Do I Prevent 'Insufficient Input/Output Validation'?
+## How Do I Prevent 'Insufficient Input/Output Validation'?
 
 To prevent "Insufficient Input/Output Validation" vulnerabilities:
 - Input Validation:
@@ -101,8 +96,8 @@ To prevent "Insufficient Input/Output Validation" vulnerabilities:
   - Follow secure coding practices, such as using parameterized queries and prepared statements to prevent SQL injection.
 - Regular Security Testing:
   - Conduct regular security assessments, including penetration testing and code reviews, to identify and address vulnerabilities.
- 
-# Example Attack Scenarios
+
+## Example Attack Scenarios
 
 **Scenario #1** Remote Code Execution via Malicious Input
 
@@ -118,7 +113,8 @@ An attacker identifies a mobile application that processes user-provided data an
 The application fails to properly validate or sanitize the generated output, allowing the attacker's crafted data to execute code or trigger unintended actions.
 By exploiting this vulnerability, the attacker achieves remote code execution, gaining control over the mobile device, its resources, or sensitive data.
 
-# References
+<!--
+## References
 
 - OWASP
   - [Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
@@ -127,6 +123,4 @@ By exploiting this vulnerability, the attacker achieves remote code execution, g
 - External
   - [External References](http://cwe.mitre.org/)
   - [Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
-
-
-
+-->

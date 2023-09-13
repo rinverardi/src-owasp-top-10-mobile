@@ -1,8 +1,9 @@
 ---
 layout: col-sidebar
-title: "Top 10 Mobile Risks - OWASP Draft List 2023- Beta 3"
+title: "OWASP -- Top 10 Mobile Risks"
 ---
 
+<!--
 - [M1: Improper Credential Usage](m1-improper-credential-usage.md)
 - [M2: Inadequate Supply Chain Security](m2-inadequate-supply-chain-security.md)
 - [M3: Insecure Authentication/Authorization](m3-insecure-authentication-authorization.md)
@@ -26,3 +27,4 @@ title: "Top 10 Mobile Risks - OWASP Draft List 2023- Beta 3"
 * Path Overwrite and Path Traversal
 * Unprotected Endpoints (Deeplink, Activitity, Service ...)
 * Unsafe Sharing
+-->

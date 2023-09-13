@@ -1,10 +1,6 @@
----
+# M2: Inadequate Supply Chain Security
 
-layout: col-sidebar
-title: "M2: Inadequate Supply Chain Security"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -14,7 +10,7 @@ This can allow the attacker to steal data, spy on users, or take control of the 
 
 This can lead to unauthorized data access or manipulation, denial of service, or complete takeover of the mobile app or device.
 
-# Attack Vectors
+## Attack Vectors
 
 **Exploitability AVERAGE**
 
@@ -22,7 +18,7 @@ There are multiple ways to exploit Inadequate Supply Chain vulnerability for exa
 
 Another way, a threat agent can exploit vulnerabilities in third-party libraries or components used in the app.
 
-# Security Weakness
+## Security Weakness
 
 **Prevalence COMMON**
 
@@ -32,7 +28,7 @@ Inadequate Supply Chain vulnerability occurs due to a lack of secure coding prac
 
 Other causes for inadequate supply chain vulnerabilities include insufficient or insecure app signing and distribution process, weakness in third-party software components or libraries, insufficient security controls for data, encryption, storage, or exposing sensitive data to unauthorized access.
 
-# Technical Impacts
+## Technical Impacts
 
 **Impact SEVERE**
 
@@ -46,7 +42,7 @@ If an attacker successfully exploits inadequate supply chain security, the techn
 
 **System Compromise:** The attacker can compromise the entire system of the mobile application, which can lead to a complete loss of control over the system. This can result in the shutdown of the application, significant data loss, and long-term damage to the reputation of the mobile application developer.
 
-# Business Impacts
+## Business Impacts
 
 **Impact SEVERE**
 
@@ -60,7 +56,7 @@ If an attacker successfully exploits inadequate supply chain security, the busin
 
 **Supply Chain Disruption:** The attack can disrupt the organization's supply chain and lead to delays or interruptions in the delivery of goods or services. This can result in financial losses and reputational damage to the organization.
 
-# Am I vulnerable to 'Inadequate Supply Chain Vulnerability'?
+## Am I vulnerable to 'Inadequate Supply Chain Vulnerability'?
 
 It is possible that you are vulnerable to inadequate supply chain vulnerability, particularly if you use mobile applications that are developed by third-party developers or rely on third-party libraries and components. The vulnerability can arise due to a variety of reasons, such as:
 
@@ -72,7 +68,7 @@ It is possible that you are vulnerable to inadequate supply chain vulnerability,
 
 **Lack of Security Awareness:** If the mobile application developer does not have adequate security awareness, they may not implement the necessary security controls to prevent supply chain attacks.
 
-# How Do I Prevent 'Inadequate Supply Chain Vulnerability'?
+## How Do I Prevent 'Inadequate Supply Chain Vulnerability'?
 
 * Implement secure coding practices, code review, and testing throughout the mobile app development lifecycle to identify and mitigate vulnerabilities.
 * Ensure secure app signing and distribution processes to prevent attackers from signing and distributing malicious code.
@@ -80,17 +76,19 @@ It is possible that you are vulnerable to inadequate supply chain vulnerability,
 * Establish security controls for app updates, patches, and releases to prevent attackers from exploiting vulnerabilities in the app.
 * Monitor and detect supply chain security incidents through security testing, scanning, or other techniques to detect and respond to incidents in a timely manner.
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 **Scenario #1** Malware Injection
 
 An attacker injects malware into a popular mobile app during the development phase. The attacker then signs the app with a valid certificate and distributes it to the app store, bypassing the app store's security checks.
 Users download and install the infected app, which steals their login credentials and other sensitive data. The attacker then uses the stolen data to commit fraud or identity theft, causing significant financial harm to the victims and reputational damage to the app provider.
 
-# References
+<!--
+## References
 - OWASP
   - [Supply Chain Vulnerabilities](https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/K02-supply-chain-vulnerabilities)
   - [OWASP Dependency Check](https://owasp.org/www-project-dependency-check/)
 
 - External
   - [External References](http://cwe.mitre.org/)
+-->

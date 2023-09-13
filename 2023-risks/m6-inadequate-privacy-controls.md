@@ -1,9 +1,6 @@
----
-layout: col-sidebar
-title: "M6: Inadequate Privacy Controls"
----
+# M6: Inadequate Privacy Controls
 
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -17,8 +14,7 @@ This information is valuable to attackers for several reasons. For example, an a
 
 In general, PII could either be leaked (i.e., a violation of confidentiality), manipulated (violation of integrity) or destroyed/blocked (violation of availability). 
 
-
-# Attack Vectors	
+## Attack Vectors
 
 **Exploitability AVERAGE**
 
@@ -26,8 +22,7 @@ Typical sources for PII are well protected, e.g., the sandbox of the app, the ne
 
 Obtaining PII thus requires the attacker to first breach security on another level. Attackers could eavesdrop on the network communication, access file system, clipboard, or logs with a trojan or get their hands on the mobile device and create a backup to analyze. Since PII is just data that can be stored, processed, and transmitted by all means available on mobile devices, the possibilities to extract or manipulate it are manifold.
 
-
-# Security Weakness	
+## Security Weakness
 
 **Prevalence COMMON**
 
@@ -39,8 +34,7 @@ Risks of privacy violations increase due to careless handling of PII by develope
 
 Hence, an app is vulnerable to privacy infringements if some personal data it collects motivates an attacker to manipulate or abuse that data through a storage or transmission medium that is insufficiently secured.
 
-
-# Technical Impacts	
+## Technical Impacts
 
 **Impact LOW**
 
@@ -48,8 +42,7 @@ Privacy violations usually have little technical impact on the system as a whole
 
 If user data is manipulated it might render the system unusable for that user. Through ill-formed data, also the backend may be disturbed if it is missing proper sanitization and exception handling.
 
-
-# Business Impacts
+## Business Impacts
 
 **Impact SEVERE** 
 
@@ -63,8 +56,7 @@ The extent and severity of the business impact, which a privacy violation has, s
 
 **Loss or theft of PII:** Actual information stolen might be misused, even for attacks on the provider of the app. For example, specific user data could be used to employ a social engineering attack on the provider by impersonating a victim.
 
-
-# Am I Vulnerable To 'Inadequate Privacy Controls'?
+## Am I Vulnerable To 'Inadequate Privacy Controls'?
 
 An app can only be vulnerable to Inadequate Privacy Controls if it processes some form of personally identifiable information. This is almost always the case: Client apps' IP addresses visible to a server, logs of the apps' usage, and metadata sent with crash reports or analytics are PII that apply to most apps. Usually, an app will collect and process additional, more sensitive PII from its users, like accounts, payment data, locations and more. 
 
@@ -76,8 +68,7 @@ Given an app that uses PII, it might expose it like any other sensitive data. Th
 
 The other OWASP Mobile Top 10 risks provide deeper insights on how an app might be vulnerable to the different attack vectors.
 
-
-# How Do I Prevent 'Inadequate Privacy Controls'?
+## How Do I Prevent 'Inadequate Privacy Controls'?
 
 Something that does not exist cannot be attacked, so the safest approach to prevent privacy violations is to minimize the amount and variety of PII that is processed. This requires full awareness of all PII assets in a given app. With that awareness, the following questions should be assessed: 
 
@@ -94,8 +85,7 @@ Threat modeling can be used to determine the most likely ways that privacy viola
 
 Static and dynamic security checking tools might reveal common pitfalls, like logging of sensitive data or leakage to clipboard or URL query parameters.
 
-
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 The following scenarios showcase inadequate privacy controls in mobile apps: 
 
@@ -115,8 +105,8 @@ Alternatively, by setting hasFragileUserData to 'true' in Android, an app may pr
 
 Hence, both settings should be explicitly set for apps to make the developers' intent transparent and to control the information flow through backups or between subsequent installations of an app. 
 
-
-# References
+<!--
+## References
 
 - OWASP
   - [User Privacy Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html)
@@ -125,3 +115,4 @@ Hence, both settings should be explicitly set for apps to make the developers' i
   - [OWASP Top 10 for Large Language Models: LLM06: Sensitive Information Disclosure](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 - External
   - [EU General Data Protection Regulation](https://gdpr.eu/)
+-->

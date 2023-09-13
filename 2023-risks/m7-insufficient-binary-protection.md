@@ -1,10 +1,6 @@
----
+# M7: Insufficient Binary Protection
 
-layout: col-sidebar
-title: "M7: Insufficient Binary Protection"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -14,8 +10,7 @@ The binary could contain valuable secrets, such as commercial API keys or hardco
 
 Besides collecting information, attackers could also manipulate app binaries to access paid features for free or to bypass other security checks. In the worst case, popular apps could be modified to contain malicious code and be distributed via third-party app stores or under a new name to exploit unsuspecting users. One common attack example is reconfiguring the payment identifiers in an app, repackaging it, and distributing it via app stores. Then, when users download this unauthorized copy from the app store, the attacker receives the payments instead of the original provider. 
 
-
-# Attack Vectors	
+## Attack Vectors
 
 **Exploitability EASY**
 
@@ -26,7 +21,7 @@ An app binary could be subject to two types of attacks:
 - Reverse engineering: The app binary is decompiled and scanned for valuable information, like secret keys, algorithms, or vulnerabilities. 
 - Code tampering: The app binary is manipulated, e.g., to remove license checks, circumvent paywalls or obtain other benefits as a user. Alternatively, the app can be manipulated to contain malicious code. 
 
-# Security Weakness	
+## Security Weakness
 
 **Prevalence COMMON**
 
@@ -40,8 +35,7 @@ Especially popular apps are likely to be manipulated and redistributed through a
 
 Note that there are no fully reliable mechanisms to prevent binary attacks. Defending against them is an arms race between the developers investing in countermeasures and attackers who break these measures. So, the question to be answered for each app is: How much effort should be put into measures against binary attacks? 
 
-
-# Technical Impacts	
+## Technical Impacts
 
 **Impact MODERATE**
 
@@ -51,9 +45,8 @@ If secrets leak, they must be replaced quickly throughout the system, which is d
 
 Yet, manipulation has even more impact on the technical soundness of a system. By manipulation of the binaries, attackers could change how apps work arbitrarily, for example to their own benefit or to disturb the backends, if they are insufficiently hardened against such malicious requests. 
 
+## Business Impacts
 
-# Business Impacts
-	
 **Impact MODERATE**
 
 Leakage of API keys for commercial APIs or similar can cause significant costs if they are misused on a large scale. The same holds for apps that are tampered with to remove license checks or to publish their functionality with a competing app. In both cases, individuals cracking an app or stealing an API key for personal use will likely go unnoticed. However at scale, for example when API keys or even functionality is systematically used with other apps, malicious competitors might get a significant advantage because they have significantly lower costs.
@@ -62,8 +55,7 @@ The business model of the app developers may be threatened even more if intellec
 
 Great reputational damage could arise in particular for popular apps that get redistributed with malicious code. Even though the app provider can hardly prevent redistribution of a tampered copy of its app, the negative publicity will likely be directed at the original provider. Hence, redistribution of unauthorized copies should be made as difficult as possible for an attacker to reduce the probability of this risk.
 
-
-# Am I Vulnerable To 'Insufficient Binary Protection'?
+## Am I Vulnerable To 'Insufficient Binary Protection'?
 
 All apps are vulnerable to binary attacks. Binary attacks can become particularly harmful if the app has sensitive data or algorithms hardcoded in its binary or if it is very popular. If there are additional protective measures, like obfuscation, encoding of secrets in native code (for Android) or similar, successful attacks become harder to achieve but never impossible. 
 
@@ -71,8 +63,7 @@ Whether the app is sufficiently secure depends on the business impact that diffe
 
 For a quick check, developers can inspect their own app binaries using similar tools as attackers would use. There are many free or affordable tools, like MobSF, otool, apktool and Ghidra that are also quite easy to use and well documented. 
 
-
-# How Do I Prevent 'Insufficient Binary Protection'?
+## How Do I Prevent 'Insufficient Binary Protection'?
 
 For each app, it should be assessed whether any critical content is contained in the binary or whether its popularity mandates binary protection. If yes, a threat modeling analysis helps to identify the highest risks and their expected financial impact in case they occur. For the most relevant risks, countermeasures should be taken. 
 
@@ -84,8 +75,7 @@ Apps always run in untrusted execution environments and should only get the leas
 
 **Redistribution** (with malicious code): Integrity checks, e.g., on startup, could also detect redistribution and modification of app binaries. These violations could automatically be reported to find and remove the unauthorized copies of the app from the app stores before they become widespread. There are also specialized companies that support this use case.
 
-
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 **Scenario #1** Hardcoded API keys: Assume an app uses a commercial API where it must pay a small fee for each call. These calls would be easily paid for by the subscription fee the users pay for that app. However, the API key used for access and billing is hardcoded in the app's unprotected binary code. An attacker who wants access could reverse engineer the app with free tools and get access to the secret string. Since API access is only protected with the API key and no additional user authentication, the attacker can freely work on the API or even sell the API key. In the worst case, the API keys could be misused a lot, causing substantial financial damage to the provider of the app, or at least blocking legitimate users of the app if the API access is rate-limited. 
 
@@ -93,8 +83,8 @@ Apps always run in untrusted execution environments and should only get the leas
 
 **Scenario #3** Hardcoded AI models: Assume a medical app that features an AI to answer user requests given as speech or free text inputs needs. This app includes its specialized and quality-assured AI model in its source code to enable offline access and avoid hosting own download servers. This AI model is the most valuable asset of this app and took many person-years in development. An attacker might try to extract this model from the source code and sell it to competitors. If the app binary is insufficiently protected, the attacker could not only access the AI model, but also learn how it is used, selling this information along with the AI training parameters.
 
-
-# References
+<!--
+## References
 
 - OWASP
   - [Tampering and Reverse Engineering (MASTG)](https://mas.owasp.org/MASTG/General/0x04c-Tampering-and-Reverse-Engineering/)
@@ -105,3 +95,4 @@ Apps always run in untrusted execution environments and should only get the leas
 
 - External
   - [External References](http://cwe.mitre.org/)
+-->

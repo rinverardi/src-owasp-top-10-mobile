@@ -1,22 +1,18 @@
----
+# M10: Insufficient Cryptography
 
-layout: col-sidebar
-title: "M10: Insufficient Cryptography"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
 Threat agents who exploit insecure cryptography in mobile applications can undermine the confidentiality, integrity, and authenticity of sensitive information. These threat agents include attackers who target cryptographic algorithms or implementations to decrypt sensitive data, malicious insiders who manipulate cryptographic processes or leak encryption keys, state-sponsored actors engaged in cryptanalysis for intelligence purposes, cybercriminals who exploit weak encryption to steal valuable data or conduct financial fraud, and attackers who leverage vulnerabilities in cryptographic protocols or libraries.
 
-# Attack vectors
+## Attack vectors
 
 **Exploitability AVERAGE**
 
 The attack vector for insecure cryptography in a mobile application involves exploiting vulnerabilities in the cryptographic mechanisms used to protect sensitive information. Adversaries may employ various techniques, such as cryptographic attacks, brute force attacks, or side-channel attacks, to exploit weaknesses in encryption algorithms, key management, or implementation flaws. By targeting insecure cryptography, attackers aim to decrypt encrypted data, manipulate cryptographic processes, or gain unauthorized access to sensitive information. This can lead to data breaches, unauthorized access to user accounts, compromised confidentiality, or the ability to forge or tamper with data.
 
-# Security weakness
+## Security weakness
 
 **Prevalence COMMON**
 
@@ -24,13 +20,13 @@ The attack vector for insecure cryptography in a mobile application involves exp
 
 Insecure cryptography in a mobile application introduces security weaknesses that can undermine the effectiveness of cryptographic measures and compromise the confidentiality and integrity of sensitive data. These weaknesses may include using weak encryption algorithms or inadequate key lengths, poor key management practices, improper handling of encryption keys, insecure random number generation, flawed implementation of cryptographic protocols, or vulnerabilities in cryptographic libraries or frameworks. Attackers can exploit these weaknesses to bypass encryption, perform cryptographic attacks, manipulate data, or gain unauthorized access to encrypted information. Insecure hash functions and cryptographic algorithms pose significant security weaknesses in mobile applications. These vulnerabilities can lead to serious data breaches and unauthorized access to sensitive information. When outdated or weak hash functions are used, attackers can exploit the flaws to reverse-engineer hashed data, revealing the original content. To protect mobile applications from these security risks, it is essential to adopt strong and modern hash functions and cryptographic algorithms, as well as follow best practices in encryption and key management to ensure data integrity and confidentiality. Regular security audits and updates are also crucial to maintain the highest level of protection against potential threats.
 
-# Technical Impact 
+## Technical Impact
 
 **Impact SEVERE**
 
 This vulnerability will result in the unauthorized retrieval of sensitive information from the mobile device.
 
-# Business Impacts
+## Business Impacts
 
 **Impact SEVERE**
 
@@ -44,7 +40,7 @@ Insufficient cryptography or insecure hash functions in a mobile application can
 
 **Compliance and Legal Consequences**: Many industries have specific data protection and privacy regulations that mandate the use of strong encryption for sensitive information. Inadequate cryptography can result in non-compliance with these regulations, leading to legal consequences, fines, or sanctions imposed by regulatory authorities.
 
-# Am I Vulnerable To 'Insufficient Cryptography'?
+## Am I Vulnerable To 'Insufficient Cryptography'?
 
 There are several ways in which insecure cryptography and insecure hash functions can manifest in a mobile application:
 
@@ -64,7 +60,7 @@ There are several ways in which insecure cryptography and insecure hash function
 
 **Lack of Salting**: Salting, the process of adding random data to the input before hashing, is essential for enhancing the security of passwords. Insecure hash functions may not support salting or may use weak salting methods, making password hashes susceptible to attacks like pre-computed tables or brute-force attacks.
 
-# How Do I Prevent ‘Insufficient Cryptography’?
+## How Do I Prevent ‘Insufficient Cryptography’?
 
 To prevent "insufficient cryptography" vulnerabilities in the mobile application, consider the following best practices:
 
@@ -94,7 +90,7 @@ To prevent "insufficient cryptography" vulnerabilities in the mobile application
 
 **Use Key Derivation Functions (KDFs)**: For password hashing, use Key Derivation Functions like PBKDF2, bcrypt, or scrypt. These functions are specifically designed for securely deriving cryptographic keys from passwords and provide additional security features like iteration counts to slow down brute-force attacks.
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 **Scenario #1:** Man-in-the-Middle (MitM) Attacks - An attacker intercepts the communication between the mobile application and the server. Weak cryptography can enable attackers to decrypt the intercepted data, modify it, and re-encrypt it before forwarding it to the intended recipient. This can lead to unauthorized access, data manipulation, or the injection of malicious content.
 
@@ -106,10 +102,11 @@ To prevent "insufficient cryptography" vulnerabilities in the mobile application
 
 **Scenario #5:** Crypto Implementation Flaws - Weak cryptography can also stem from implementation flaws in the mobile application itself. These flaws may include incorrect usage of cryptographic libraries, insecure key generation, improper random number generation, or insecure handling of encryption-related functions. Attackers can exploit these flaws to bypass or weaken the encryption protections.
 
-# References
+<!--
+## References
 
 - OWASP
     - [OWASP](https://www.owasp.org/index.php/OWASP_Top_Ten)
 - External
     - [External References](http://cwe.mitre.org/)
-
+-->

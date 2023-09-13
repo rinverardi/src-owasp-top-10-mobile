@@ -1,22 +1,18 @@
----
+# M3: Insecure Authentication/Authorization
 
-layout: col-sidebar
-title: "M3: Insecure Authentication/Authorization"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
 Threat agents that exploit authentication and authorization vulnerabilities typically do so through automated attacks that use available or custom-built tools.
 
-# Attack Vectors
+## Attack Vectors
 
 **Exploitability EASY**
 
 Once the adversary understands the vulnerabilities in either the authentication or authorization scheme, they can exploit these weaknesses in one of two ways. They may either fake or bypass the authentication by directly submitting service requests to the mobile app's backend server, circumventing any direct interaction with the mobile app, or they can log into the application as a legitimate user after successfully passing the authentication control and then force-browse to a vulnerable endpoint to execute administrative functionality. Both exploitation methods are typically accomplished via mobile malware within the device or botnets owned by the attacker.
 
-# Security Weakness
+## Security Weakness
 
 **Prevalence COMMON**
 
@@ -32,7 +28,7 @@ Poor or missing authentication schemes can allow an adversary to anonymously exe
 
 Mobile apps face unique authentication requirements that can diverge from traditional web authentication schemes, largely due to their varying availability requirements. Unlike traditional web apps where users are expected to be online and authenticate in real-time with a backend server, mobile apps may need to fulfill uptime requirements that necessitate offline authentication due to the unreliability or unpredictability of mobile internet connections. This requirement can significantly impact the factors developers must consider when implementing mobile authentication.
 
-# Technical Impacts
+## Technical Impacts
 
 **Impact SEVERE**
 
@@ -42,7 +38,7 @@ The technical repercussions of poor authentication occur when the solution is un
 
 Moreover, failures in authentication can also expose underlying authorization failures. When authentication controls fail, the solution is unable to verify the user's identity, which is closely tied to a user's role and associated permissions. If an attacker can anonymously execute sensitive functionality, it indicates that the underlying code is not verifying the permissions of the user issuing the request for the action. Consequently, the anonymous execution of code underscores failures in both authentication and authorization controls.
 
-# Business Impacts
+## Business Impacts
 
 **Impact SEVERE**
 
@@ -53,7 +49,7 @@ The business impact of poor authentication and authorization will typically resu
 - Fraud;
 - Unauthorized Access to Data.
 
-# Am I Vulnerable To 'Insecure Authentication / Authorization'?
+## Am I Vulnerable To 'Insecure Authentication / Authorization'?
 
 Understanding the difference between authentication and authorization is paramount in evaluating mobile application security. Authentication identifies an individual, while authorization verifies if the identified individual has the necessary permissions for a particular action. These two aspects are closely related, as authorization checks should immediately follow mobile device request authentication.
 
@@ -72,7 +68,7 @@ Similarly, mobile apps can exhibit various signs of insecure authentication:
 * **Weak Password Policy** - The use of a simplified password-entering process may imply insecure authentication.
 * **Usage of Features like FaceID and TouchID** - Employing features like FaceID or TouchID could be indicative of insecure authentication.
 
-# How Do I Prevent 'Insecure Authentication and Authorization'?
+## How Do I Prevent 'Insecure Authentication and Authorization'?
 
 To prevent both insecure authentication and authorization, it's crucial to avoid weak patterns and reinforce secure measures.
 
@@ -104,7 +100,7 @@ To avoid insecure authorization:
 * Assume that all client-side authorization can be bypassed, hence reinforcing server-side authorization controls whenever possible.
 * If offline authorization checks are necessary within the mobile app's code, developers should perform local integrity checks to detect unauthorized code changes.
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 The following scenarios showcase weak authentication or authorization controls in mobile apps:
 
@@ -118,9 +114,11 @@ The following scenarios showcase weak authentication or authorization controls i
 
 **Scenario #5:** Transmission of LDAP roles: A user makes an API endpoint request to a backend REST API that includes a standard oAuth bearer token along with a header that includes a list of LDAP groups that the user belongs to. The backend request validates the bearer token and then inspects the incoming LDAP groups for the right group membership before continuing on to the sensitive functionality. However, the backend system does not perform an independent validation of LDAP group membership and instead relies upon the incoming LDAP information coming from the user. The user can tweak the incoming header and report to be a member of any LDAP group arbitrarily and perform administrative functionality.
 
-# References
+<!--
+## References
 
 - OWASP
     - [OWASP](https://www.owasp.org/index.php/OWASP_Top_Ten)
 - External
     - [External References](http://cwe.mitre.org/)
+-->

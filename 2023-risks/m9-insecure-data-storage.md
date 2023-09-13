@@ -1,10 +1,6 @@
----
+# M9: Insecure Data Storage
 
-layout: col-sidebar
-title: "M9: Insecure Data Storage"
----
-
-# Threat Agents
+## Threat Agents
 
 **Application Specific**
 
@@ -12,7 +8,7 @@ Insecure data storage in a mobile application can attract various threat agents 
 
 These threat agents exploit vulnerabilities like weak encryption, insufficient data protection, insecure data storage mechanisms, and improper handling of user credentials. It is crucial for mobile app developers and organisations to implement strong security measures, such as robust encryption, secure data storage practices, and adherence to best practices for mobile application security, to mitigate the risks associated with insecure data storage.
 
-# Attack vectors
+## Attack vectors
 
 **Exploitability EASY**
 
@@ -20,7 +16,7 @@ Insecure data storage in a mobile application exposes vulnerabilities to various
 
 Overall, insecure data storage on a mobile application opens avenues for attacks ranging from direct data extraction to interception of sensitive information, emphasising the critical need for robust encryption, secure transmission protocols, and thorough security measures in mobile app development.
 
-# Security weakness
+## Security weakness
 
 **Prevalence COMMON**
 
@@ -30,8 +26,7 @@ Insecure data storage in a mobile application encompasses various security weakn
 
 Furthermore, the absence of secure data transmission protocols leaves data vulnerable to interception during communication between the mobile app and external servers. Collectively, these security weaknesses in mobile application data storage create opportunities for data breaches, unauthorised access, and data tampering, emphasising the critical need for robust encryption, secure storage practices, and stringent access controls to mitigate these risks.
 
-
-# Technical Impact 
+## Technical Impact
 
 **Impact SEVERE**
 
@@ -49,8 +44,7 @@ Insecure data storage on a mobile application can have significant technical imp
 
 **Compliance violations:** Insecure data storage can lead to non-compliance with industry regulations and data protection standards. App developers may be subject to penalties or legal actions if they fail to adequately protect user data and maintain secure data storage practices.
 
-
-# Business Impacts 
+## Business Impacts
 
 **Impact SEVERE**
 
@@ -66,7 +60,7 @@ The business impact of insecure data storage on a mobile application can be sign
 
 **Competitive disadvantage**: In today's highly competitive landscape, organisations that experience data breaches or have a reputation for insecure data storage can face a competitive disadvantage. Customers are increasingly concerned about the security of their data, and they may choose competitors who have a better track record of safeguarding sensitive information.
 
-# Am I Vulnerable To 'Insecure Data Storage'?
+## Am I Vulnerable To 'Insecure Data Storage'?
 
 Insecure data storage and unintended data leakage in a mobile application can manifest in several ways, leading to potential privacy breaches and unauthorised access to sensitive information. Here are common manifestations of these issues:
 
@@ -87,7 +81,7 @@ Insecure data storage and unintended data leakage in a mobile application can ma
 **Unintended Data Sharing**: Improper handling of data sharing features within the application can result in unintended data leakage. If sensitive data is shared with unintended recipients or if the sharing process is not adequately secured, it can lead to privacy breaches.
 
 
-# How Do I Prevent ‘Insecure Data Storage’?
+## How Do I Prevent ‘Insecure Data Storage’?
 
 To prevent insecure data storage in a mobile application and ensure the protection of sensitive data, the following security measures should be implemented:
 
@@ -107,7 +101,7 @@ To prevent insecure data storage in a mobile application and ensure the protecti
 
 **Stay Informed**: Stay up to date with the latest security threats and vulnerabilities in the mobile application landscape. Monitor security forums, security advisories, and mobile platform updates to ensure timely mitigation of emerging risks.
 
-# Example Attack Scenarios
+## Example Attack Scenarios
 
 Few example scenarios that illustrate potential instances of insecure data storage in a mobile application:
 
@@ -123,9 +117,11 @@ Few example scenarios that illustrate potential instances of insecure data stora
 
 **Improper Handling of Temporary Files**: The mobile application creates temporary files to process or store sensitive data, but fails to properly handle and delete these files afterward. This leaves sensitive information exposed and vulnerable to unauthorized access.
 
-# References
+<!--
+## References
 
 - OWASP
   - [OWASP](https://www.owasp.org/)
 - External
   - [External References](http://cwe.mitre.org/)
+-->
