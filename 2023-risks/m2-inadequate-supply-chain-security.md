@@ -14,7 +14,7 @@ This can lead to unauthorized data access or manipulation, denial of service, or
 
 **Exploitability AVERAGE**
 
-There are multiple ways to exploit Inadequate Supply Chain vulnerability for example- an insider threat agent or an attacker can inject malicious code during the development phase of the app, then they can compromise the app signing keys or certificates to sign malicious code as trusted. 
+There are multiple ways to exploit an inadequate supply chain vulnerability; e.g., an insider threat agent or an attacker can inject malicious code during the development phase of the app, then they can compromise the app signing keys or certificates to sign malicious code as trusted.
 
 Another way, a threat agent can exploit vulnerabilities in third-party libraries or components used in the app.
 

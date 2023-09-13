@@ -65,6 +65,7 @@ Insufficient input/output validation vulnerability has significant technical and
 - Data Integrity Issues: Insufficient validation may result in data corruption, incorrect processing, or inaccurate outputs, compromising the reliability and integrity of the system.
 
 On the business side, the impacts include:
+
 - Reputation Damage: Successful exploitation of the vulnerability can result in data breaches, system disruptions, and customer distrust, damaging the organization's reputation and brand image.
 - Legal and Compliance Consequences: Non-compliance with data protection regulations due to insufficient validation can lead to legal liabilities, regulatory penalties, and potential financial losses.
 - Financial Impact: Data breaches or system disruptions caused by the vulnerability can result in financial losses due to incident response, remediation costs, legal fees, and potential loss of revenue.
@@ -82,19 +83,31 @@ An application can be vulnerable to insufficient input/output validation due to:
 ## How Do I Prevent 'Insufficient Input/Output Validation'?
 
 To prevent "Insufficient Input/Output Validation" vulnerabilities:
+
 - Input Validation:
+
   - Validate and sanitize user input using strict validation techniques.
   - Implement input length restrictions and reject unexpected or malicious data.
+
 - Output Sanitization:
+
   - Properly sanitize output data to prevent cross-site scripting (XSS) attacks.
   - Use output encoding techniques when displaying or transmitting data.
+
 - Context-Specific Validation:
+
   - Perform specific validation based on data context (e.g., file uploads, database queries) to prevent attacks like path traversal or injection.
+
 - Data Integrity Checks:
+
   - Implement data integrity checks to detect and prevent data corruption or unauthorized modifications.
+
 - Secure Coding Practices:
+
   - Follow secure coding practices, such as using parameterized queries and prepared statements to prevent SQL injection.
+
 - Regular Security Testing:
+
   - Conduct regular security assessments, including penetration testing and code reviews, to identify and address vulnerabilities.
 
 ## Example Attack Scenarios

@@ -6,13 +6,14 @@
 
 Privacy controls are concerned with protecting Personally Identifiable Information (PII), e.g., names and addresses, credit card information, e-mail and IP addresses, information about health, religion, sexuality and political opinions. 
 
-This information is valuable to attackers for several reasons. For example, an attacker could 
-- Impersonate the victim to commit a fraud, 
-- Misuse the victim's payment data, 
-- Blackmail the victim with sensitive information or 
-- Harm the victim by destroying or manipulating the victim's critical data. 
+This information is valuable to attackers for several reasons. For example, an attacker could:
 
-In general, PII could either be leaked (i.e., a violation of confidentiality), manipulated (violation of integrity) or destroyed/blocked (violation of availability). 
+- Impersonate the victim to commit a fraud,
+- Misuse the victim's payment data,
+- Blackmail the victim with sensitive information or
+- Harm the victim by destroying or manipulating the victim's critical data.
+
+In general, PII could either be leaked (i.e., a violation of confidentiality), manipulated (violation of integrity) or destroyed/blocked (violation of availability).
 
 ## Attack Vectors
 

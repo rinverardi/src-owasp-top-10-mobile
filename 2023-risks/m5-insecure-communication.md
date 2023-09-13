@@ -72,7 +72,7 @@ The usual risks of insecure communication are around data integrity, data confid
 * Always require SSL chain verification.
 * Only establish a secure connection after verifying the identity of the endpoint server using trusted certificates in the key chain.
 * Alert users through the UI if the mobile app detects an invalid certificate.
-* Do not send sensitive data over alternate channels (e.g, SMS, MMS, or notifications).
+* Do not send sensitive data over alternate channels (e.g., SMS, MMS, or notifications).
 * If possible, apply a separate layer of encryption to any sensitive data before it is given to the SSL channel. In the event that future vulnerabilities are discovered in the SSL implementation, the encrypted data will provide a secondary defense against confidentiality violation.
 * During development cycles, avoid overriding SSL verification methods to allow untrusted certificates, instead try using self-signed certificates or a local development certificate authority (CA)
 * During security assessments, it is advised to analyze application traffic to see if any traffic goes through plaintext channels  
